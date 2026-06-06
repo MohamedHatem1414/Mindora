@@ -1,0 +1,357 @@
+/* الإعدادات العامة والمتغيرات الراقية */
+:root {
+    --bg-cream: #f4efeb;       /* البيج الكريمي الناعم جداً المستوحى من اللوجو */
+    --text-charcoal: #232220;  /* الأسود الفحمي المريح للكتابة والقريب من لون خلفية الانستغرام الداكنة */
+    --accent-brown: #766555;   /* بني ناعم للأيقونات والعناوين الهامة */
+    --pure-white: #ffffff;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-charcoal);
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+}
+
+/* تعديل الخطوط عند التحويل للإنجليزية لمظهر أرقى */
+#app-html.en-mode, #app-html.en-mode * {
+    font-family: 'Playfair Display', serif;
+}
+#app-html.en-mode p, #app-html.en-mode .lang-btn, #app-html.en-mode .nav-item {
+    font-family: sans-serif; /* خط ناعم للبارجرافات الانجلش */
+}
+
+/* تحويل العناوين المركبة بالـ CSS بناء على اللغة */
+#hero-title .text-en { display: none; }
+#app-html.en-mode #hero-title .text-ar { display: none; }
+#app-html.en-mode #hero-title .text-en { display: block; }
+
+/* شريط التنقل (Navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: rgba(244, 239, 235, 0.85);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(35, 34, 32, 0.04);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-charcoal);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transition-smooth);
+    opacity: 0.7;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    opacity: 1;
+    color: var(--accent-brown);
+}
+
+/* أزرار تبديل اللغة */
+.lang-switcher {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 4px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: var(--transition-smooth);
+    color: var(--text-charcoal);
+}
+
+.lang-btn.active {
+    background-color: var(--pure-white);
+    color: var(--text-charcoal);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* السيكشن الرئيسي (Hero) */
+.hero-section {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.5) 0%, var(--bg-cream) 70%);
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background-color: rgba(118, 101, 85, 0.1);
+    color: var(--accent-brown);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-content .highlight {
+    color: var(--accent-brown);
+    font-style: italic;
+}
+
+.tagline {
+    font-size: 1.35rem;
+    max-width: 700px;
+    margin: 0 auto 45px auto;
+    opacity: 0.8;
+}
+
+/* الأزرار الاحترافية */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background-color: var(--text-charcoal);
+    color: var(--bg-cream);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    background-color: #333;
+}
+
+.btn-secondary {
+    border: 1px solid rgba(35, 34, 32, 0.2);
+    color: var(--text-charcoal);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(35, 34, 32, 0.05);
+    transform: translateY(-3px);
+}
+
+/* السيكشن المخصص للرؤية وعن حنين */
+.about-section, .pillars-section {
+    padding: 120px 8%;
+}
+
+.about-section {
+    background-color: var(--pure-white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-charcoal);
+}
+
+.section-header .line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-brown);
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+.about-card {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--bg-cream);
+    padding: 60px 40px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.about-p {
+    font-size: 1.4rem;
+    line-height: 2;
+    font-style: italic;
+}
+
+.founder-badge {
+    margin-top: 30px;
+    font-weight: 700;
+    color: var(--accent-brown);
+    font-size: 1.1rem;
+}
+
+/* سيكشن الكروت (الركائز الثلاثة) */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.pillar-card {
+    background-color: var(--pure-white);
+    padding: 50px 40px;
+    border-radius: 24px;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(118, 101, 85, 0.06);
+}
+
+/* كرت مميز في النص لكسر الملل */
+.pillar-card.featured {
+    background-color: var(--text-charcoal);
+    color: var(--pure-white);
+}
+
+.pillar-card.featured h3 {
+    color: var(--bg-cream);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.pillar-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--accent-brown);
+}
+
+.pillar-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* الفوتر */
+footer {
+    background-color: var(--text-charcoal);
+    color: var(--pure-white);
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+}
+
+.footer-content p {
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+.footer-content .brand-name {
+    font-size: 1.8rem;
+    opacity: 1;
+    color: var(--bg-cream);
+}
+
+.footer-line {
+    width: 100%;
+    max-width: 400px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.1);
+    margin: 30px auto;
+}
+
+.copyright {
+    font-size: 0.85rem;
+}
+
+/* شاشات الموبايل والتجاوب الذكي (Responsive) */
+@media (max-width: 991px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+    .about-card {
+        padding: 40px 20px;
+    }
+    .about-p {
+        font-size: 1.15rem;
+    }
+}
