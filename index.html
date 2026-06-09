@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindora | Awareness • Growth • Self-Discovery</title>
     <link rel="stylesheet" href="style.css">
-    <!-- خطوط جوجل الاحترافية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- الهيدر / شريط التنقل -->
     <header class="navbar">
         <div class="logo">
             <img src="Logo.jpg" alt="Mindora Logo">
@@ -23,10 +21,9 @@
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item active" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
                 <li><a href="#about" class="nav-item" data-ar="عن المبادرة" data-en="About">عن المبادرة</a></li>
-                <li><a href="#pillars" class="nav-item" data-ar="ركائزنا" data-en="Pillars">ركائزنا</a></li>
+                <li><a href="#journey" class="nav-item" data-ar="رحلتك مع Mindora" data-en="Your Journey">رحلتك مع Mindora</a></li>
             </ul>
             
-            <!-- أزرار تبديل اللغة الشيك -->
             <div class="lang-switcher">
                 <button onclick="switchLanguage('ar')" id="btn-ar" class="lang-btn active">العربية</button>
                 <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn">EN</button>
@@ -34,7 +31,6 @@
         </nav>
     </header>
 
-    <!-- واجهة الموقع الرئيسية (Hero) -->
     <section id="home" class="hero-section">
         <div class="hero-content">
             <div class="badge" data-ar="مساحة للوعي النفسي" data-en="A Space for Mental Awareness">مساحة للوعي النفسي</div>
@@ -51,13 +47,12 @@
             </p>
             
             <div class="cta-buttons">
-                <a href="https://www.instagram.com/_its.mindora_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-primary" data-ar="زارة صفحتنا على إنستغرام ↗" data-en="Visit Instagram ↗">زيارة صفحتنا على إنستغرام ↗</a>
+                <a href="https://www.instagram.com/_its.mindora_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-primary" data-ar="زيارة صفحتنا على إنستغرام ↗" data-en="Visit Instagram ↗">زيارة صفحتنا على إنستغرام ↗</a>
                 <a href="#about" class="btn btn-secondary" data-ar="اكتشف رحلتنا" data-en="Explore Our Journey">اكتشف رحلتنا</a>
             </div>
         </div>
     </section>
 
-    <!-- سيكشن من نحن / القصة -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="section-header">
@@ -75,18 +70,16 @@
         </div>
     </section>
 
-    <!-- سيكشن الركائز الثلاثة المستوحاة من البيدج -->
-    <section id="pillars" class="pillars-section">
+    <section id="journey" class="pillars-section">
         <div class="container">
             <div class="section-header">
-                <h2 data-ar="الركائز الأساسية" data-en="Core Pillars">الركائز الأساسية</h2>
+                <h2 data-ar="رحلتك مع Mindora" data-en="Your Journey with Mindora">رحلتك مع Mindora</h2>
                 <div class="line"></div>
             </div>
             
             <div class="pillars-grid">
-                <!-- الكرت الأول -->
                 <div class="pillar-card">
-                    <div class="card-icon">👁️‍🗨️</div>
+                    <div class="card-icon">👁️‍</div>
                     <h3 data-ar="الوعي" data-en="Awareness">الوعي</h3>
                     <p data-ar="تسليط الضوء على الأفكار الدفينة وفهم كيفية عمل العقل البشري وتأثيره على تصرفاتنا اليومية." 
                        data-en="Shining a light on deep thoughts, understanding how the human mind works, and its impact on our daily behavior.">
@@ -94,7 +87,6 @@
                     </p>
                 </div>
                 
-                <!-- الكرت الثاني -->
                 <div class="pillar-card featured">
                     <div class="card-icon">🌿</div>
                     <h3 data-ar="النمو" data-en="Growth">النمو</h3>
@@ -104,7 +96,6 @@
                     </p>
                 </div>
                 
-                <!-- الكرت الثالث -->
                 <div class="pillar-card">
                     <div class="card-icon">🔍</div>
                     <h3 data-ar="إكتشاف الذات" data-en="Self-Discovery">إكتشاف الذات</h3>
@@ -117,7 +108,16 @@
         </div>
     </section>
 
-    <!-- الفوتر الشيك -->
+    <section class="disclaimer-section" style="padding: 60px 8%; background-color: rgba(118, 101, 85, 0.05); text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto; border: 1px dashed rgba(118, 101, 85, 0.3); padding: 30px; border-radius: 20px;">
+            <p style="font-size: 1.1rem; line-height: 1.8; font-weight: 600;"
+               data-ar="تنويه: Mindora مساحة لطيفة هدفها تساعدك تفهم نفسك ومشاعرك بشكل أبسط. كل اللي بنقدمه هنا هو محتوى للتوعية والدعم، ومش بديل لأي تشخيص أو علاج نفسي متخصص 💛" 
+               data-en="Disclaimer: Mindora is a gentle space aimed at helping you understand yourself and your emotions more simply. Everything we provide here is for awareness and support purposes only, and is not a substitute for professional mental health diagnosis or treatment 💛">
+               تنويه: Mindora مساحة لطيفة هدفها تساعدك تفهم نفسك ومشاعرك بشكل أبسط. كل اللي بنقدمه هنا هو محتوى للتوعية والدعم، ومش بديل لأي تشخيص أو علاج نفسي متخصص 💛
+            </p>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             <p class="brand-name">Mindora 🌿</p>
@@ -127,7 +127,6 @@
         </div>
     </footer>
 
-    <!-- سكريبت تحويل اللغة السحري -->
     <script>
         function switchLanguage(lang) {
             const htmlTag = document.getElementById('app-html');
